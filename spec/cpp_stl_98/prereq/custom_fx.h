@@ -10,6 +10,7 @@ class custom_fx_t : public kaitai::custom_decoder {
 public:
     custom_fx_t(int p_key);
     std::string decode(std::string src);
+    std::string encode(std::string src);
 };
 
 }

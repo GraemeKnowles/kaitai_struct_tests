@@ -7,6 +7,7 @@ class custom_fx_no_args_t : public kaitai::custom_decoder {
 public:
     custom_fx_no_args_t();
     std::string decode(std::string src);
+    std::string encode(std::string src);
 };
 
 #endif  // CUSTOM_FX_NO_ARGS_H_

@@ -13,3 +13,13 @@ std::string my_custom_fx_t::decode(std::string src) {
 
     return dst;
 }
+
+std::string my_custom_fx_t::encode(std::string src) {
+    int len = src.length();
+    std::string dst(len, ' ');
+
+    for (int i = 0; i < len; i++)
+        dst[i] = src[i] - key;
+
+    return dst;
+}

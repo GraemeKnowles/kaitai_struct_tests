@@ -11,8 +11,7 @@ BOOST_AUTO_TEST_CASE(test_position_in_seq) {
     std::ifstream ifs("src/position_in_seq.bin", std::ifstream::binary);
     kaitai::kstream ks(&ifs);
     position_in_seq_t* r = new position_in_seq_t(&ks);
-
-    COMPARE_ARRAY(uint8_t, r->numbers(), (0 + 1), 2, 3);
+    COMPARE_ARRAY(uint8_t, r->numbers(), 0 + 1, 2, 3);
 
     delete r;
 }
